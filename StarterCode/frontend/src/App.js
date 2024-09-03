@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductList from './App/Page/ProductList';
+import ProductList from './App/pages/ProductList';
 
 const App = () => {
   return (
