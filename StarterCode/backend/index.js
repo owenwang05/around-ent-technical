@@ -18,6 +18,8 @@ let products = [
     { id: 4, name: 'Product 4', description: 'description 4', price: 150, imageUrl: '' },
     { id: 5, name: 'Product 5', description: 'description 5', price: 500, imageUrl: '' },
     { id: 6, name: 'Product 6', description: 'description 6', price: 50, imageUrl: '' },
+    { id: 7, name: 'Product 7', description: 'description 7', price: 5000, imageUrl: '' }, 
+    { id: 8, name: 'Product 8', description: 'description 8', price: 120, imageUrl: '' },
 ];
 
 //function to generate a url for getting a random image from picsum
@@ -28,16 +30,19 @@ const fetchImageUrl = () => {
 //implement the get api for getting products
 app.get('/api/products', (req, res) => {
   for(let i = 0; i < products.length; i++){
-    if(!products[i].imageUrl) products[i].imageUrl = fetchImageUrl(); 
+    if(products[i].imageUrl === ''){
+      products[i].imageUrl = fetchImageUrl(); 
+    }
+    console.log(products[i].imageUrl)
   }
   res.status(200).json({"products": products});
 });
 
 //implement the delete api for deleting a product by Id
 app.delete('/api/products/:id', (req, res) => {
-  const id = parseInt(req.params.id)  ;
-  products = products.filter(product => product.id != id);
-  res.status(202);
+  const id = parseInt(req.params.id);
+  products = products.filter(product => product.id !== id);
+  res.status(202).json({ message: `Successfully deleted product with id: ${id}` });
 });
 
 app.listen(PORT, () => {

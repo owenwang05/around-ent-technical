@@ -3,9 +3,9 @@ import ProductList from './App/pages/ProductList';
 
 const App = () => {
   return (
-    <div>
+    <>
       <ProductList />
-    </div>
+    </>
   );
 };
 
