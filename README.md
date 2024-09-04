@@ -1,11 +1,51 @@
-# SWE INTERVIEW TEST 
-THIS IS TO TEST YOUR SKILLS TO MEET OUR APP DEVELOPMENT REQUIREMENTS
+# User Setup Guide 
+Install newest version of Node.js (if not already installed): <https://nodejs.org/en/download/package-manager>
 
-1. Clone this repo to your local machine.
-2. Read `Assignment Requirements` carefully and follow it.
-4. Please commit your entire code to `your own Github repository` 
-5. On your repo, please add step-by-step instructions on how to launch (for both the Backend and Frontend) to the `README.md`
-6. Share your repo link with us via email.
+## Clone Local Copy 
+Clone the repository
+```
+git clone https://github.com/owenwang05/around-ent-technical
+```
+Enter the cloned repository 
+```
+cd around-end-technical
+```
 
-HAPPY CODING! </br>
-A Round Entertainment
+## Backend Set Up 
+Enter the backend folder 
+```
+cd startercode/backend
+```
+Install necessary dependencies 
+```
+npm install
+```
+Run backend server
+```
+node index.js
+```
+
+## Frontend Set Up 
+Exit the backend folder and enter the frontend folder
+```
+cd ..
+cd frontend
+```
+Install node dependencies 
+```
+npm install
+```
+Install Material UI
+```
+npm install @mui/material @emotion/react @emotion/styled
+```
+Install Tailwind CSS
+```
+npm install -D tailwindcss
+```
+Run frontend server
+```
+npm start
+```
+
+Author: Owen Wang (owenwang05)
