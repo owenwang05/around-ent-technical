@@ -26,10 +26,10 @@ node index.js
 ```
 
 ## Frontend Set Up 
-Exit the backend folder and enter the frontend folder
+Open a new terminal and enter the frontend directory 
 ```
-cd ..
-cd frontend
+cd ~
+cd around-end-technical/startercode/frontend
 ```
 Install node dependencies 
 ```
